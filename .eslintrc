@@ -151,7 +151,7 @@ rules:
   func-names: [1, "never"]
   func-style: ["error", "declaration", { "allowArrowFunctions": true }]
   id-blacklist: 1
-  indent: [1, 4, {"SwitchCase": 1}]
+  indent: 0
   jsx-quotes: [1, "prefer-single"]
   keyword-spacing: 1
   linebreak-style: 0
