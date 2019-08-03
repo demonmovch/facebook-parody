@@ -88,7 +88,7 @@ rules:
   no-loop-func: 1
   no-magic-numbers: 0
   no-multi-spaces: [1, "exceptions": { "VariableDeclarator": true, "Property": true }]
-  key-spacing: [1, { "beforeColon": false, "afterColon": true, "align": "value" }]
+  key-spacing: 0
   no-multi-str: 1
   no-new-func: 1
   no-new-wrappers: 1
@@ -138,9 +138,7 @@ rules:
   brace-style: 1
   camelcase: 1
   capitalized-comments: 0
-  comma-dangle: [1, {
-    "objects": "always-multiline"
-  }]
+  comma-dangle: 0
   comma-spacing: 1
   comma-style: 1
   computed-property-spacing: 1
@@ -183,19 +181,19 @@ rules:
   no-trailing-spaces: 1
   no-unneeded-ternary: 1
   no-whitespace-before-property: 1
-  object-curly-spacing: [1, "always", { "arraysInObjects": false, "objectsInObjects": false }]
+  object-curly-spacing: 0
   object-property-newline: [1, { "allowMultiplePropertiesPerLine": true }]
   one-var: [1, "never"]
   operator-assignment: 1
   semi-spacing: 1
   semi: 1
   space-before-blocks: 1
-  space-before-function-paren: 1
+  space-before-function-paren: 0
   space-in-parens: 1
   space-unary-ops: 1
   spaced-comment: [0, "always"]
   wrap-regex: 1
-  arrow-parens: [1, "always"]
+  arrow-parens: 0
   arrow-spacing: 1
   constructor-super: 1
   generator-star-spacing: ["error", {"before": false, "after": true}]
@@ -286,13 +284,13 @@ rules:
   react/style-prop-object: 1
   react/jsx-boolean-value: 1
   react/jsx-closing-bracket-location: [1, {"selfClosing": "line-aligned", nonEmpty: "after-props"}]
-  react/jsx-curly-spacing: [1, "always"]
-  react/jsx-equals-spacing: [1, "always"]
+  react/jsx-curly-spacing: 0
+  react/jsx-equals-spacing: 0
   react/jsx-filename-extension: [1, { "extensions": [".js"] }]
   react/jsx-first-prop-new-line: [1, "multiline"]
   react/jsx-handler-names: 0
-  react/jsx-indent: 1
-  react/jsx-indent-props: 1
+  react/jsx-indent: 0
+  react/jsx-indent-props: 0
   react/jsx-key: 1
   react/jsx-max-props-per-line: [0, { "maximum": 3 }]
   react/jsx-no-bind: 0
