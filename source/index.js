@@ -1,11 +1,16 @@
-// Core
 import React from 'react';
 import { render } from 'react-dom';
-
-// Instruments
 import './theme/init';
+import App from './navigation/App';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { store } from './init/store';
 
-// Intro
-import Gallery from './basic-redux';
-
-render(<Gallery />, document.getElementById('app'));
+render(
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>,
+  document.getElementById('app')
+);
