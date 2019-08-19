@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import FlipMove from 'react-flip-move';
 import Styles from './styles.m.css';
-import { mockedProfile } from '../../instruments/mockedData';
 import { Composer, Catcher, Post } from '../../components';
 import { postsActions } from '../../bus/posts/actions';
 
 const mapStateToProps = state => {
   return {
     posts: state.posts,
+    profile: state.profile,
   };
 };
 
@@ -30,10 +30,6 @@ const mapDispatchToProps = dispatch => {
   mapDispatchToProps
 )
 export default class Posts extends Component {
-  static defaultProps = {
-    profile: mockedProfile,
-  };
-
   componentDidMount() {
     const { actions } = this.props;
 

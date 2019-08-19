@@ -1,5 +1,4 @@
 import { types } from './types';
-import { api } from '../../REST';
 
 export const postsActions = {
   fillPosts: posts => {
