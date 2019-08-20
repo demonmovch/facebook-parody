@@ -3,12 +3,13 @@ import { render } from 'react-dom';
 import './theme/init';
 import App from './navigation/App';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { store } from './init/store';
+import { ConnectedRouter as Router } from 'react-router-redux';
+import { history } from './init/middleware/core';
 
 render(
   <Provider store={store}>
-    <Router>
+    <Router history={history}>
       <App />
     </Router>
   </Provider>,

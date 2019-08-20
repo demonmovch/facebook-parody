@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import cx from 'classnames';
-
 // Instruments
 import Styles from './styles.m.css';
 import { book } from '../../navigation/book';
+//Actions
+import { authActions } from '../../bus/auth/actions';
 
 const mapStateToProps = state => {
   return {
@@ -15,14 +16,18 @@ const mapStateToProps = state => {
   };
 };
 
-@connect(mapStateToProps)
+const mapDispathcToProps = {
+  logoutAsync: authActions.logoutAsync,
+};
+
+@connect(
+  mapStateToProps,
+  mapDispathcToProps
+)
 export default class Nav extends Component {
   static defaultProps = {
     // State
     isOnline: false,
-
-    // Actions
-    logoutAsync: () => {},
   };
 
   _getNav = () => {

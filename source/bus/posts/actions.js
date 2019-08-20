@@ -18,10 +18,27 @@ export const postsActions = {
       type: types.FETCH_POSTS_ASYNC,
     };
   },
+  clearPosts: () => {
+    return {
+      type: types.CLEAR_POSTS,
+    };
+  },
   createPostAsync: comment => {
     return {
       type: types.CREATE_POST_ASYNC,
       payload: comment,
+    };
+  },
+  removePost: id => {
+    return {
+      type: types.REMOVE_POST,
+      payload: id,
+    };
+  },
+  removePostAsync: id => {
+    return {
+      type: types.REMOVE_POST_ASYNC,
+      payload: id,
     };
   },
 };

@@ -18,4 +18,29 @@ export const authActions = {
       payload: credentials,
     };
   },
+  authenticateAsync: () => {
+    return {
+      type: types.AUTHENTICATE_ASYNC,
+    };
+  },
+  initializeAsync: () => {
+    return {
+      type: types.INITIALIZE_ASYNC,
+    };
+  },
+  initialize: () => {
+    return {
+      type: types.INITIALIZE,
+    };
+  },
+  logoutAsync: () => {
+    return {
+      type: types.LOGOUT_ASYNC,
+    };
+  },
+  logout: () => {
+    return {
+      type: types.LOGOUT,
+    };
+  },
 };
