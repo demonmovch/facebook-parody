@@ -9,12 +9,13 @@ export function* login({ payload: credentials }) {
     yield put(uiActions.startFetching());
 
     const response = yield apply(api, api.auth.login, [credentials]);
-    const { message } = yield apply(response, response.json);
+    const { data, message } = yield apply(response, response.json);
 
     if (response.status !== 200) {
       throw new Error(message);
     }
 
+    yield put(profileActions.fillProfile(data));
     yield put(authActions.authenticate());
   } catch (error) {
     yield put(uiActions.emitError(error, 'login worker'));
