@@ -41,4 +41,28 @@ export const postsActions = {
       payload: id,
     };
   },
+  likePostAsync: id => {
+    return {
+      type: types.LIKE_POST_ASYNC,
+      payload: id,
+    };
+  },
+  likePost: likedPostdata => {
+    return {
+      type: types.LIKE_POST,
+      payload: likedPostdata,
+    };
+  },
+  unlikePostAsync: id => {
+    return {
+      type: types.UNLIKE_POST_ASYNC,
+      payload: id,
+    };
+  },
+  unlikePost: unlikedPostdata => {
+    return {
+      type: types.UNLIKE_POST,
+      payload: unlikedPostdata,
+    };
+  },
 };

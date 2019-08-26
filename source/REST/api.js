@@ -68,5 +68,13 @@ export const api = {
         },
       });
     },
+    like(id) {
+      return fetch(`${MAIN_URL}/feed/like/${id}`, {
+        method: 'PUT',
+        headers: {
+          Authorization: this.token,
+        },
+      });
+    },
   },
 };
