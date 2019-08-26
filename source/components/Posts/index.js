@@ -5,6 +5,7 @@ import FlipMove from 'react-flip-move';
 import Styles from './styles.m.css';
 import { Composer, Catcher, Post } from '../../components';
 import { postsActions } from '../../bus/posts/actions';
+import { usersActions } from '../../bus/users/actions';
 
 const mapStateToProps = state => {
   return {
@@ -15,7 +16,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators({ ...postsActions }, dispatch),
+    actions: bindActionCreators({ ...postsActions, ...usersActions }, dispatch),
   };
 };
 
@@ -28,6 +29,7 @@ export default class Posts extends Component {
     const { actions } = this.props;
 
     actions.fetchPostsAsync();
+    actions.fectchUsersAsync();
   }
 
   render() {
