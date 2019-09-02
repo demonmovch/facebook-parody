@@ -11,6 +11,7 @@ export function* removePost({ payload: id }) {
 
     if (response.status !== 204) {
       const { message } = yield apply(response, response.json);
+
       throw new Error(message);
     }
 
