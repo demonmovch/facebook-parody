@@ -29,11 +29,22 @@ const userProfile = {
   lastName: 'White',
   token,
 };
+const userData = {
+  avatar: 'https://lab.lectrum.io/redux/api/image/4luucyyhwlwd/placeholder.jpg',
+  firstName: 'John',
+  id: '5d569247949e6017ac81d82e',
+  lastName: 'Doe',
+};
 
 const credentials = {
   email: 'test@email.com',
   password: '1111',
   remember: true,
+};
+
+const responseUserDataSuccess = {
+  data: userData,
+  message: successMesasge,
 };
 
 const responseDataSuccess = {
@@ -88,6 +99,8 @@ global.__ = {
   newName,
   newAvatar,
   newPassword,
+  responseUserDataSuccess,
+  userData,
 };
 global.fetch = fetch;
 global.localStorage = new LocalStorage();
